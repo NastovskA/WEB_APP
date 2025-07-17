@@ -22,14 +22,14 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 25px 50px;
+            padding: 20px 50px;
             background: rgba(0, 0, 0, 0.3);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .logo {
-            font-size: 28px;
+            font-size: 24px;
             font-weight: bold;
             color: #ffd700;
             letter-spacing: 1px;
@@ -37,15 +37,15 @@
 
         .nav {
             display: flex;
-            gap: 40px;
+            gap: 30px;
         }
 
         .nav a {
             color: rgba(255, 255, 255, 0.8);
             text-decoration: none;
             font-weight: 500;
-            font-size: 14px;
-            letter-spacing: 2px;
+            font-size: 12px;
+            letter-spacing: 1px;
             transition: all 0.3s ease;
             position: relative;
         }
@@ -75,20 +75,65 @@
             position: relative;
             padding-bottom: 120px;
         }
+                .auth-buttons {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .auth-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: rgba(255, 255, 255, 0.9);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            letter-spacing: 1px;
+        }
+
+        .auth-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: #ffd700;
+            color: #ffd700;
+        }
+
+        .auth-btn.signup {
+            background: linear-gradient(45deg, #ffd700, #ffed4e);
+            color: #1a1a2e;
+            border: none;
+        }
+
+        .auth-btn.signup:hover {
+            background: linear-gradient(45deg, #ffed4e, #ffd700);
+            color: #1a1a2e;
+        }
+
+        .auth-icon {
+            width: 14px;
+            height: 14px;
+            fill: currentColor;
+        }
 
         .left-section {
             flex: 1;
-            padding: 80px 50px 40px;
+            padding: 60px 40px 30px;
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
         }
 
         .title {
-            font-size: 72px;
+            font-size: 50px;
             font-weight: 900;
             line-height: 0.9;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             letter-spacing: 3px;
             background: linear-gradient(45deg, #ffd700, #ffed4e);
             -webkit-background-clip: text;
@@ -97,7 +142,7 @@
         }
 
         .subtitle {
-            font-size: 20px;
+            font-size: 18px;
             color: rgba(255, 255, 255, 0.7);
             margin-bottom: 50px;
             font-weight: 300;
@@ -129,16 +174,16 @@
         }
 
         .info-title {
-            font-size: 28px;
+            font-size: 22px;
             font-weight: 700;
             color: #ffd700;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             letter-spacing: 1px;
         }
 
         .info-content {
             color: rgba(255, 255, 255, 0.8);
-            font-size: 16px;
+            font-size: 14px;
             line-height: 1.6;
             font-weight: 300;
         }
@@ -146,7 +191,7 @@
         .trait-bars {
             display: flex;
             flex-direction: column;
-            gap: 16px;
+            gap: 14px;
             width: 100%;
             max-width: 380px;
         }
@@ -155,12 +200,11 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 12px 0;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 16px 0;
         }
 
         .trait-name {
-            font-size: 16px;
+            font-size: 13px;
             color: rgba(255, 255, 255, 0.9);
             min-width: 110px;
             font-weight: 500;
@@ -168,19 +212,19 @@
 
         .paw-rating {
             display: flex;
-            gap: 6px;
+            gap: 2px;
             align-items: center;
         }
 
         .paw {
-            width: 20px;
-            height: 20px;
+            width: 22px;
+            height: 24px;
             position: relative;
             cursor: pointer;
             transition: all 0.3s ease;
         }
 
-        /* Main paw pad */
+        /* Main paw pad - larger and more rounded */
         .paw::before {
             content: '';
             position: absolute;
@@ -188,58 +232,68 @@
             left: 50%;
             transform: translateX(-50%);
             width: 12px;
-            height: 8px;
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
+            height: 9px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
             transition: all 0.3s ease;
         }
 
-        /* Toe pads */
+        /* Toe pads - better positioned and sized */
         .paw .toe-1,
         .paw .toe-2,
         .paw .toe-3,
         .paw .toe-4 {
             position: absolute;
             width: 4px;
-            height: 4px;
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
             transition: all 0.3s ease;
         }
 
         .paw .toe-1 {
             top: 6px;
-            left: 4px;
+            left: 3px;
+            transform: rotate(-15deg);
         }
 
         .paw .toe-2 {
             top: 3px;
-            left: 8px;
+            left: 7px;
+            transform: rotate(-5deg);
         }
 
         .paw .toe-3 {
             top: 3px;
-            right: 8px;
+            right: 7px;
+            transform: rotate(5deg);
         }
 
         .paw .toe-4 {
             top: 6px;
-            right: 4px;
+            right: 3px;
+            transform: rotate(15deg);
         }
 
         .paw.filled::before {
-            background: #ffd700;
+            background: linear-gradient(135deg, #ffd700, #ffed4e);
+            box-shadow: 0 0 6px rgba(255, 215, 0, 0.4);
         }
 
         .paw.filled .toe-1,
         .paw.filled .toe-2,
         .paw.filled .toe-3,
         .paw.filled .toe-4 {
-            background: #ffd700;
+            background: linear-gradient(135deg, #ffd700, #ffed4e);
+            box-shadow: 0 0 3px rgba(255, 215, 0, 0.3);
         }
 
-        .paw.filled {
-            filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.4));
+        .paw:hover {
+            transform: scale(1.1);
+        }
+
+        .paw.filled:hover {
+            filter: brightness(1.2);
         }
 
         .center-section {
@@ -250,6 +304,9 @@
             position: relative;
             padding: 40px;
         }
+
+
+
 
         .dog-image {
             width: 400px;
@@ -276,8 +333,9 @@
         .paw-navigation {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 12px;
             margin-bottom: 40px;
+            padding: 0 10px;
         }
 
         .paw-nav-item {
@@ -285,29 +343,26 @@
             align-items: center;
             cursor: pointer;
             transition: all 0.3s ease;
-            padding: 18px 22px;
+            padding: 15px 30px;
             border-radius: 12px;
             background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
         }
 
         .paw-nav-item:hover {
             background: rgba(255, 255, 255, 0.1);
-            border-color: rgba(255, 215, 0, 0.3);
             transform: translateX(8px);
         }
 
         .paw-nav-item.active {
             background: rgba(255, 215, 0, 0.15);
-            border-color: #ffd700;
             transform: translateX(12px);
         }
 
         .paw-nav-item .paw-icon {
-            width: 32px;
-            height: 32px;
-            margin-right: 16px;
+            width: 35px;
+            height: 40px;
+            margin-right: 18px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -315,17 +370,17 @@
             position: relative;
         }
 
-        /* Navigation paw icons */
+        /* Navigation paw icons - improved design */
         .paw-nav-item .paw-icon::before {
             content: '';
             position: absolute;
-            top: 18px;
+            top: 16px;
             left: 50%;
             transform: translateX(-50%);
             width: 10px;
-            height: 6px;
-            background: rgba(255, 255, 255, 0.4);
-            border-radius: 50%;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
             transition: all 0.3s ease;
         }
 
@@ -335,52 +390,56 @@
         .paw-nav-item .paw-icon .nav-toe-4 {
             position: absolute;
             width: 3px;
-            height: 3px;
-            background: rgba(255, 255, 255, 0.4);
-            border-radius: 50%;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
             transition: all 0.3s ease;
         }
+            
 
         .paw-nav-item .paw-icon .nav-toe-1 {
             top: 12px;
-            left: 10px;
+            left: 11px;
+            transform: rotate(-15deg);
         }
 
         .paw-nav-item .paw-icon .nav-toe-2 {
             top: 10px;
-            left: 13px;
+            left: 14px;
+            transform: rotate(-5deg);
         }
 
         .paw-nav-item .paw-icon .nav-toe-3 {
             top: 10px;
-            right: 13px;
+            right: 14px;
+            transform: rotate(5deg);
         }
 
         .paw-nav-item .paw-icon .nav-toe-4 {
             top: 12px;
-            right: 10px;
+            right: 11px;
+            transform: rotate(15deg);
         }
 
         .paw-nav-item.active .paw-icon::before {
-            background: #1a1a2e;
+            background: linear-gradient(135deg, #ffd700, #ffed4e);
+            box-shadow: 0 0 8px rgba(255, 215, 0, 0.5);
         }
 
         .paw-nav-item.active .paw-icon .nav-toe-1,
         .paw-nav-item.active .paw-icon .nav-toe-2,
         .paw-nav-item.active .paw-icon .nav-toe-3,
         .paw-nav-item.active .paw-icon .nav-toe-4 {
-            background: #1a1a2e;
+            background: linear-gradient(135deg, #ffd700, #ffed4e);
+            box-shadow: 0 0 4px rgba(255, 215, 0, 0.4);
         }
 
         .paw-nav-item.active .paw-icon {
-            background: linear-gradient(45deg, #ffd700, #ffed4e);
-            box-shadow: 0 0 16px rgba(255, 215, 0, 0.5);
             transform: scale(1.1);
-            border-radius: 50%;
         }
 
         .nav-label {
-            font-size: 18px;
+            font-size: 14px;
             font-weight: 600;
             color: rgba(255, 255, 255, 0.8);
             letter-spacing: 1px;
@@ -403,15 +462,15 @@
 
         .nav-buttons {
             display: flex;
-            gap: 12px;
+            gap: 10px;
         }
 
         .nav-btn {
             background: rgba(255, 255, 255, 0.1);
             border: 2px solid rgba(255, 255, 255, 0.2);
             border-radius: 50%;
-            width: 50px;
-            height: 50px;
+            width: 45px;
+            height: 45px;
             cursor: pointer;
             transition: all 0.3s ease;
             font-size: 20px;
@@ -433,9 +492,9 @@
             background: linear-gradient(45deg, #ffd700, #ffed4e);
             color: #1a1a2e;
             border: none;
-            padding: 18px 36px;
+            padding: 14px 28px;
             border-radius: 50px;
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 700;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -525,6 +584,21 @@
             <a href="#contact">CONTACT</a>
             <a href="#canines">CANINES</a>
         </nav>
+        <div class="auth-buttons">
+                <a href="#login" class="auth-btn">
+                    <svg class="auth-icon" viewBox="0 0 24 24">
+                        <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                    </svg>
+                    LOG IN
+                </a>
+                <a href="#signup" class="auth-btn signup">
+                    <svg class="auth-icon" viewBox="0 0 24 24">
+                        <path d="M15 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm-9-2V8c0-.55-.45-1-1-1s-1 .45-1 1v2H2c-.55 0-1 .45-1 1s.45 1 1 1h2v2c0 .55.45 1 1 1s1-.45 1-1v-2h2c.55 0 1-.45 1-1s-.45-1-1-1H6zm9 4c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+                    </svg>
+                    SIGN UP
+                </a>
+            </div>
+        </div>
     </div>
 
     <div class="main-container">
